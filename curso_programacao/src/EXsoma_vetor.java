@@ -24,6 +24,19 @@ public class EXsoma_vetor {
 		  for (int i=0; i<n; i++) {
 		        soma = soma + vetor[i];
 		    }
+		  
+		  media = soma / n;
+		  
+		  System.out.print("VALORES = ");
+
+		    for (int i=0; i<n; i++) {
+		    	System.out.printf("%.1f  ", vetor[i]);
+		    }
+
+		    System.out.printf("\nSOMA = %.2f\n", soma);
+		    System.out.printf("MEDIA = %.2f\n", media);
+
+			sc.close();
 		
 	}
 
