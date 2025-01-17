@@ -18,7 +18,11 @@ public class Ex_List {
 		for(String z : list) {
 			System.out.println(z);
 		}
-		
+		System.out.println("------------------------------");
+		list.removeIf(z -> z.charAt(0) == 'F');
+		for(String z : list) {
+			System.out.println(z);
 	}
 
+}
 }
