@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Ex_List {
 
@@ -19,8 +20,16 @@ public class Ex_List {
 			System.out.println(z);
 		}
 		System.out.println("------------------------------");
-		list.removeIf(z -> z.charAt(0) == 'F');
+		list.removeIf(z -> z.charAt(0) == 'G');
 		for(String z : list) {
+			System.out.println(z);
+	}
+		System.out.println("------------------------------");
+		System.out.println("Index of Pedro: " + list.indexOf("Pedro"));
+		System.out.println("Index of Enzo: " + list.indexOf("Enzo"));
+		System.out.println("------------------------------");
+		List<String> resultado = list.stream().filter(z -> z.charAt(0) == 'F').collect(Collectors.toList());
+		for(String z : resultado) {
 			System.out.println(z);
 	}
 
