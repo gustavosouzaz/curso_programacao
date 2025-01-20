@@ -43,7 +43,8 @@ public class Ex_List_trabalho {
 	    	 double percent = sc.nextDouble();
 	    	 list.get(pos).increaseSalary(percent);
 	     }
-
+        System.out.println();
+        System.out.println("List of employees:");
 		
 	}
 	
