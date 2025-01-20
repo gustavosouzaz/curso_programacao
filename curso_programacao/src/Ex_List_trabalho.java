@@ -33,9 +33,18 @@ public class Ex_List_trabalho {
 	     }
 	     
 	     System.out.println("Enter the employee id that will have salary increase : ");
-	     
-	     
+	     int idsalary = sc.nextInt();
+
 		
 	}
-
+	
+	public static Integer position(List<Employee> list, int id) {
+		for(int i = 0; i < list.size(); i++) {
+			if(list.get(i).getId() == id) {
+				return i;
+			}
+		}
+		return null;
+	}
+	
 }
