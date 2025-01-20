@@ -34,6 +34,15 @@ public class Ex_List_trabalho {
 	     
 	     System.out.println("Enter the employee id that will have salary increase : ");
 	     int idsalary = sc.nextInt();
+	     Integer pos = position(list,idsalary);
+	     if (pos == null) {
+	    	 System.out.println("This id does not exist!");
+	     }
+	     else {
+	    	 System.out.println("Enter the percentage: ");
+	    	 double percent = sc.nextDouble();
+	    	 list.get(pos).increaseSalary(percent);
+	     }
 
 		
 	}
