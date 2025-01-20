@@ -31,6 +31,10 @@ public class Ex_List_trabalho {
 	    		
 	    		list.add(emp);	    		
 	     }
+	     
+	     System.out.println("Enter the employee id that will have salary increase : ");
+	     
+	     
 		
 	}
 
