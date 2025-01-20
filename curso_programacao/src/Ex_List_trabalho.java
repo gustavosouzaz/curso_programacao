@@ -45,7 +45,10 @@ public class Ex_List_trabalho {
 	     }
         System.out.println();
         System.out.println("List of employees:");
-		
+		for (Employee emp : list) {
+			System.out.println(emp);
+		}
+			sc.close();
 	}
 	
 	public static Integer position(List<Employee> list, int id) {
