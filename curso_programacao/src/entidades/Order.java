@@ -10,12 +10,10 @@ public class Order {
 	private Date moment;
 	private OrderStatus status;
 	
-	public Order(int i, Date date, OrderStatus pedingPayment) {
-		super();
+	public Order() {
 	}
 
 	public Order(Integer id, Date moment, OrderStatus status) {
-		super();
 		this.id = id;
 		this.moment = moment;
 		this.status = status;
