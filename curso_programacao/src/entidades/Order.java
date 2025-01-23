@@ -44,10 +44,10 @@ public class Order {
 	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
-	
-	
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Order [id=" + id + ", moment=" + moment + ", status=" + status + "]";
+	}
+
 }
