@@ -5,6 +5,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entidades.Department;
+import entidades.HourContract;
 import entidades.Worker;
 import entities.enums.WorkerLevel;
 
@@ -38,7 +39,14 @@ public class Trabalhador_Exercicio {
 			 System.out.print("Enter contract #" + i + "data:");
 			 System.out.print("(DD/MM/YYYY)");
 			 Date contractDate = sdf.parse(sc.next());
-			 System.out.print("(DD/MM/YYYY)");
+			 System.out.print("Value per hour:");
+			 double valuePerHour = sc.nextDouble();	
+			 System.out.print("Duration (hours):");
+			 int hours = sc.nextInt();
+			 HourContract contract = new HourContract(contractDate, valuePerHour, hours);
+			 
+			 
+			 
 		}
 		
       sc.close();
