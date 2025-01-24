@@ -57,6 +57,14 @@ public class Worker {
 		contracts.remove(contract);
 	}
 	
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
 	public Double income(Integer year, Integer month) {
 
 		double soma = baseSalary;
