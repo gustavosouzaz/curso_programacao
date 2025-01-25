@@ -1,14 +1,14 @@
 package entidades;
 
-public class Comment {
+public class Comments {
 
 	private String text;
 
-	public Comment() {
+	public Comments() {
 		super();
 	}
 
-	public Comment(String text) {
+	public Comments(String text) {
 		super();
 		this.text = text;
 	}
