@@ -57,5 +57,14 @@ public class Post {
 		this.likes = likes;
 	}
 
-	
+	public List<Comments> getComments() {
+		return comments;
+	}
+
+	public void addComment(Comments comment) {
+		comments.add(comment);
+	}
+	public void removeComment(Comments comment) {
+		comments.remove(comment);
+	}
 }
