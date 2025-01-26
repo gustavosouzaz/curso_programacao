@@ -12,12 +12,12 @@ public class OrdemItem {
 	}
 
 
-	public OrdemItem(Integer quantity, Double price) {
+	public OrdemItem(Integer quantity, Double price, Produto produto) {
 		super();
 		this.quantity = quantity;
 		this.price = price;
+		this.produto = produto;
 	}
-
 
 	public Integer getQuantity() {
 		return quantity;
@@ -42,11 +42,19 @@ public class OrdemItem {
 		return quantity * price;
 	}
 
+	public Produto getProduto() {
+		return produto;
+	}
+
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
 
 	@Override
 	public String toString() {
-		return produto + ", $" + "Quantity: " + quantity + ", " + "Subtotal: " + subTotal();
+		return getProduto().getName() +"$ " + ", " + "Quantity: " + quantity + ", " + "Subtotal: " + subTotal();
 	}
-	
-	
+
 }
