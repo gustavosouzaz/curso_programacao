@@ -54,7 +54,7 @@ public class OrdemItem {
 
 	@Override
 	public String toString() {
-		return getProduto().getName() +"$ " + ", " + "Quantity: " + quantity + ", " + "Subtotal: " + subTotal();
+		return getProduto().getName() +" $ "+ price + ", " + "Quantity: " + quantity + ", " + "Subtotal: " + subTotal();
 	}
 
 }
