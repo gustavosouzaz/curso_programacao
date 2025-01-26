@@ -50,5 +50,4 @@ public class Pedido {
 		this.cliente = cliente;
 	}
 
-	
 }
