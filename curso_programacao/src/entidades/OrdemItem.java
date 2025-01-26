@@ -5,6 +5,7 @@ public class OrdemItem {
 	private Integer quantity;
 	private Double price;
 	
+	private Product product;
 	
 	public OrdemItem() {
 		super();
@@ -37,7 +38,9 @@ public class OrdemItem {
 		this.price = price;
 	}
 	
-	
+	public Double subTotal( ) {
+		return quantity * price;
+	}
 	
 	
 }
