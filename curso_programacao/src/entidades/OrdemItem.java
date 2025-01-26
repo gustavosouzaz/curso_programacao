@@ -5,7 +5,7 @@ public class OrdemItem {
 	private Integer quantity;
 	private Double price;
 	
-	private Product product;
+	private Produto produto;
 	
 	public OrdemItem() {
 		super();
@@ -40,6 +40,12 @@ public class OrdemItem {
 	
 	public Double subTotal( ) {
 		return quantity * price;
+	}
+
+
+	@Override
+	public String toString() {
+		return produto + ", $" + "Quantity: " + quantity + ", " + "Subtotal: " + subTotal();
 	}
 	
 	
