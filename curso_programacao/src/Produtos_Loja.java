@@ -11,9 +11,10 @@ public class Produtos_Loja {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Produto p = new Produto("TV", 1000.0);
-		OrdemItem oi1 = new OrdemItem(1,1000.0, p);
+		Produto p = new Produto("TV", 100.00);
+		OrdemItem oi1 = new OrdemItem(1, 1000.0 , p);
 		 
+		
 		System.out.println(oi1);
 		
 		sc.close();
