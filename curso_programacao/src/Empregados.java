@@ -18,12 +18,13 @@ public class Empregados {
 	    System.out.println("Enter the number of employees: ");
 		int N = sc.nextInt();
 		
-		for(int i=0; i<N; i++) {
-			System.out.println("Employee #" + N + " data: ");
+		for(int i=1; i<=N; i++) {
+			System.out.println("Employee #" + i + " data: ");
 			System.out.print("Outsourced (y/n)?  ");
 			char ch = sc.next().charAt(0);
 			System.out.print("Name: ");
-			String name = sc.next();
+			sc.nextLine();
+			String name = sc.nextLine();
 			System.out.print("Hours ");
 			int hours = sc.nextInt();
 			System.out.print("Value per hour: ");
@@ -41,7 +42,13 @@ public class Empregados {
 
 			
 		}
+		System.out.println();
+		System.out.println("PAYMENTS:");
+		for (Empregado emp : empre) {
+			System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
+		}
 		
+		sc.close();
 		
 	}
 
