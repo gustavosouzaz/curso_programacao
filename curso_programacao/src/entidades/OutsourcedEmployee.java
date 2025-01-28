@@ -1,6 +1,6 @@
 package entidades;
 
-public class OutsourcedEmployee {
+public class OutsourcedEmployee extends Empregado {
 
 	private Double additionalCharge;
 
@@ -8,8 +8,8 @@ public class OutsourcedEmployee {
 		super();
 	}
 
-	public OutsourcedEmployee(Double additionalCharge) {
-		super();
+	public OutsourcedEmployee(String name, Integer hours, Double valuePerHour, Double additionalCharge) {
+		super(name, hours, valuePerHour);
 		this.additionalCharge = additionalCharge;
 	}
 
@@ -20,8 +20,6 @@ public class OutsourcedEmployee {
 	public void setAdditionalCharge(Double additionalCharge) {
 		this.additionalCharge = additionalCharge;
 	}
-	
-	
-	
-	
+
+
 }
