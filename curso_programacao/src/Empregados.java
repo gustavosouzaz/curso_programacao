@@ -16,9 +16,9 @@ public class Empregados {
 	    List<Empregado> empre = new ArrayList<>();
 	    
 	    System.out.println("Enter the number of employees: ");
-		int N = sc.nextInt();
+		int n = sc.nextInt();
 		
-		for(int i=1; i<=N; i++) {
+		for(int i=1; i<=n; i++) {
 			System.out.println("Employee #" + i + " data: ");
 			System.out.print("Outsourced (y/n)?  ");
 			char ch = sc.next().charAt(0);
@@ -28,7 +28,7 @@ public class Empregados {
 			System.out.print("Hours ");
 			int hours = sc.nextInt();
 			System.out.print("Value per hour: ");
-			double valuePerHour = sc.nextInt();
+			double valuePerHour = sc.nextDouble();
 			
 			if(ch == 'y') {
 				
