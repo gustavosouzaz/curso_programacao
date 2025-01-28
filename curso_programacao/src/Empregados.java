@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entidades.Empregado;
+import entidades.OutsourcedEmployee;
+
 public class Empregados {
 
 	public static void main(String[] args) {
@@ -10,27 +13,32 @@ public class Empregados {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-	    List<Empregados> empre = new ArrayList<>();
+	    List<Empregado> empre = new ArrayList<>();
 	    
 	    System.out.println("Enter the number of employees: ");
 		int N = sc.nextInt();
 		
 		for(int i=0; i<N; i++) {
 			System.out.println("Employee #" + N + " data: ");
-			System.out.println("Outsourced (y/n)?  ");
-			String sn = sc.next();
-			System.out.println("Name: ");
+			System.out.print("Outsourced (y/n)?  ");
+			char ch = sc.next().charAt(0);
+			System.out.print("Name: ");
 			String name = sc.next();
-			System.out.println("Hours ");
+			System.out.print("Hours ");
 			int hours = sc.nextInt();
-			System.out.println("Value per hour: ");
-			int valuePerHour = sc.nextInt();
+			System.out.print("Value per hour: ");
+			double valuePerHour = sc.nextInt();
 			
-			if(sn == "y" ) {
+			if(ch == 'y') {
 				
+				System.out.print("Additional charge: ");
+				double additionalCharge = sc.nextDouble();
+				empre.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));				
+			}
+			else {
+				empre.add(new Empregado(name, hours, valuePerHour));
 			}
 
-			
 			
 		}
 		
