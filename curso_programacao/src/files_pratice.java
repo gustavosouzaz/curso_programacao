@@ -19,6 +19,11 @@ public class files_pratice {
       catch (IOException e) {
     	  System.out.println("Error: " + e.getMessage());
       }
+		finally {
+			if (sc != null) {
+				sc.close();
+			}
+		}
 	}
 
 }
