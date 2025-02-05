@@ -1,9 +1,10 @@
 import java.io.File;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class files_pratice {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  throws ParseException {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a folder path: ");
