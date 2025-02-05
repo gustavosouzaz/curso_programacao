@@ -1,6 +1,10 @@
 package entidades;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+import exceptions.DomainException;
 
 public class Reservation {
 	
@@ -8,16 +12,23 @@ public class Reservation {
 	private Date checkin;
 	private Date checkout;
 	
-	public Reservation() {
-		super();
-	}
-
-	public Reservation(Integer roomNumber, Date checkin, Date checkout) {
-		super();
+	
+	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	
+	
+	public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+		if (!checkOut.after(checkIn)) {
+			throw new DomainException("Check-out date must be after check-in date");
+		}
 		this.roomNumber = roomNumber;
 		this.checkin = checkin;
 		this.checkout = checkout;
 	}
+	
+	public Reservation() {
+		super();
+	}
+
 
 	public Integer getRoomNumber() {
 		return roomNumber;
@@ -43,7 +54,10 @@ public class Reservation {
 		this.checkout = checkout;
 	}
 	
-	
+	public long duration() {
+		long diff = checkout.getTime() - checkin.getTime();
+		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+	}
 	
 
 }
