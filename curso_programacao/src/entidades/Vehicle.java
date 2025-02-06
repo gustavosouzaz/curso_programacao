@@ -6,8 +6,6 @@ import java.util.List;
 public class Vehicle {
 
 	private String model;
-
-	private List<Vehicle> vehicle = new ArrayList<>();
 	
 	
 	public Vehicle() {
