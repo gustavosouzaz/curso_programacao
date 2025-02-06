@@ -3,8 +3,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entidades.CarRental;
-import entidades.Vehicle;
+import services.BrazilTaxService;
 
 public class Program {
 
@@ -22,6 +21,7 @@ public class Program {
 		System.out.println("Retirada (dd/MM/yyyy hh:mm): ");
 		LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
 		
+        BrazilTaxService taxService = new BrazilTaxService();
         
         
         sc.close();
