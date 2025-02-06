@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import services.BrazilTaxService;
+import services.RentalServices;
 
 public class Program {
 
@@ -21,8 +22,12 @@ public class Program {
 		System.out.println("Retirada (dd/MM/yyyy hh:mm): ");
 		LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), fmt);
 		
-        BrazilTaxService taxService = new BrazilTaxService();
+        System.out.print("Entre com o preço por hora: ");
+        double pricePerHour = sc.nextDouble();
+        System.out.print("Entre com o preço por dia: ");
+        double pricePerDay = sc.nextDouble();
         
+        RentalServices rentalService = new RentalServices(pricePerHour, pricePerDay);
         
         sc.close();
 	}
